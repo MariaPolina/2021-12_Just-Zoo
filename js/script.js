@@ -99,6 +99,18 @@ $(document).ready(function () {
     if ($(window).width() > 1330) {
         $('.description__button').trigger('click');
     }
+
+    $('.header__menu_about').on('click', function (event) {
+        $(this).toggleClass('active');
+        $('.about__dropdown').slideToggle(300);
+        $('.about__dropdown').css('display', 'flex');
+    });
+
+    $('.callback__number').on('click', function (event) {
+        $(this).toggleClass('active');
+        $('.callback__dropdown').slideToggle(300);
+        $('.callback__dropdown').css('display', 'flex');
+    });
 });
 
 $(window).resize(function () {

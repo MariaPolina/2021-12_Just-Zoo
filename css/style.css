@@ -197,6 +197,7 @@ a {
     width: 100%;
     align-items: center;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 .header__main_logo {
@@ -270,6 +271,11 @@ a {
     line-height: 122%;
     background: rgba(250, 249, 254, 0) url(../img/header/arrow.svg) right center no-repeat;
     background-size: auto;
+    cursor: pointer;
+}
+
+.callback__number.active {
+    background: rgba(250, 249, 254, 0) url(../img/header/arrow-d.svg) right center no-repeat;
 }
 
 .callback__text {
@@ -278,6 +284,55 @@ a {
     color: #FBC400;
     font-size: 14px;
     line-height: 122%;
+    text-decoration: underline;
+}
+
+.callback__dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    top: 80px;
+    left: 52.5%;
+    background: #FFFFFF;
+    border: 2px solid #F2F1F5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 255px;
+}
+
+.dropdown__title {
+    padding: 12px 20px 0 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #86A1BA;
+}
+
+.dropdown__tel, .dropdown__viber {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+    padding: 12px 20px 12px 50px;
+}
+
+.dropdown__tel {
+    background: #FFFFFF url(../img/header/dd-tel.svg) 20px center no-repeat;
+    border-bottom: 2px solid #F2F1F5;
+}
+
+.dropdown__viber {
+    background: #FFFFFF url(../img/header/dd-vi.svg) 20px center no-repeat;
+}
+
+.dropdown__ref {
+    padding: 0 20px 2px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FBC400;
+    margin-bottom: 20px;
     text-decoration: underline;
 }
 
@@ -381,6 +436,7 @@ a {
     display: grid;
     grid-auto-flow: column;
     width: 100%;
+    position: relative;
 }
 
 .header__menu_catalog {
@@ -389,6 +445,7 @@ a {
     background-size: auto;
     padding: 13px 25px 13px 50px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .header__menu_about, .header__menu_delivery, .header__menu_brands, .header__menu_blog, .header__menu_econom {
@@ -399,11 +456,33 @@ a {
     justify-self: center;
     width: 100%;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
 .header__menu_about:hover, .header__menu_delivery:hover, .header__menu_econom:hover, .header__menu_brands:hover, .header__menu_blog:hover {
     background-color: #F2F1F5;
     border-radius: 5px;
+}
+
+.about__dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    background: #FFFFFF;
+    border: 2px solid #F2F1F5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 177px;
+}
+
+.about__dropdown_ref {
+    padding: 12px 15px;
+}
+
+.about__dropdown_ref:not(:last-child) {
+    border-bottom: 2px solid #F2F1F5;
 }
 
 .header__menu_econom:hover {
@@ -416,6 +495,10 @@ a {
     background: rgba(250, 249, 254, 0) url(../img/header/arrow.svg) calc(100% - 25px) center no-repeat;
     background-size: auto;
     margin: 0 auto;
+}
+
+.header__menu_about.active {
+    background: #F2F1F5 url(../img/header/arrow-d.svg) calc(100% - 25px) center no-repeat;
 }
 
 .header__menu_about::after, .header__menu_delivery::after, .header__menu_econom::after, .header__menu_brands::after {
@@ -1417,7 +1500,6 @@ a {
     }
 
 }
-
 
 /*------end of general styles--------*/
 
