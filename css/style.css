@@ -45,6 +45,7 @@ html, body {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden !important;
+    font-family: Montserrat;
 }
 
 input, button, textarea, select {
@@ -84,7 +85,6 @@ a {
 /*------general--------*/
 
 .wrapper {
-    font-family: Montserrat;
     min-height: 100%;
     overflow: hidden;
     display: flex;
@@ -6522,3 +6522,172 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* -----end of corrections for sliders -----*/
+
+/* -----404 page -----*/
+
+.not-found__wrapper {
+    background: #F9F9FD url(../img/404/dog-404.png) center top no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.not-found {
+    background-image: url(../img/404/back-404.png);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.not-found__title {
+    font-weight: 700;
+    font-size: 260px;
+    line-height: 317px;
+    color: #FBC400;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.not-found__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #303361;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.not-found__return {
+    display: flex;
+    min-height: 56px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 50px;
+    background: #303361;
+    border-radius: 30px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FBC400;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.not-found__return:hover {
+    color: #303361;
+    background: #FBC400;
+}
+
+.not-found__sections_title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 51px;
+    color: #303361;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.not-found__wrapper .sections {
+    padding-top: 0px;
+    background: #F9F9FD;
+}
+
+.not-found__wrapper .sections__item {
+    background: #FFFFFF;
+}
+
+@media (max-width: 1330px) {
+    .not-found__wrapper {
+        background: #F9F9FD;
+    }
+
+    .not-found__title {
+        font-size: 80px;
+        line-height: 98px;
+        margin-top: 65px;
+        margin-bottom: 15px;
+    }
+
+    .not-found__text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+
+    .not-found__return {
+        min-height: 48px;
+        padding: 15px 45px;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .not-found__sections_title {
+        font-size: 16px;
+        margin-top: 35px;
+    }
+
+    .not-found__wrapper .sections {
+        padding-top: 0px;
+        background: #F9F9FD;
+    }
+
+    .not-found__wrapper .sections__items {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-auto-rows: 1fr;
+        overflow-x: hidden;
+        row-gap: 10px;
+        grid-auto-columns: auto;
+        grid-auto-flow: row;
+    }
+
+    .not-found__wrapper .sections__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-items: start;
+        background: #FAF9FE url(../img/main/paw-background.svg) 100px center no-repeat;
+        background-size: 20%;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.1s ease 0s;
+        margin-bottom: 0;
+        width: 290px;
+    }
+
+    .not-found__wrapper .sections__item:hover {
+        background: #FBC400 url(../img/main/paw-background-yellow.svg) 100px center no-repeat;
+        background-size: 20%;
+    }
+
+    .not-found__wrapper .sections__item_title {
+        order: 2;
+        align-self: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #303361;
+        padding: 5px 25px 5px 40px;
+        position: relative;
+        width: 100%;
+    }
+
+    .not-found__wrapper .sections__item_title::after {
+        content: url(../img/main/arrow-blue-after.svg);
+        position: absolute;
+        right: 30px;
+    }
+
+    .not-found__wrapper .sections__item_title_image {
+        order: 1;
+        height: 70px;
+        width: 60px;
+        object-fit: contain;
+    }
+
+}
+
+/* -----end of 404 page -----*/
