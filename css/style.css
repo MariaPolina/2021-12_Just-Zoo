@@ -430,6 +430,7 @@ a {
     justify-items: start;
     align-items: center;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 .header__menu_list {
@@ -446,6 +447,148 @@ a {
     padding: 13px 25px 13px 50px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.catalog__dropdown {
+    display: none;
+    grid-template: 1fr / 1fr 3fr;
+    column-gap: 65px;
+    position: absolute;
+    z-index: 5;
+    top: 80px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px 20px 0 20px;
+}
+
+.catalog__dropdown_open {
+    display: block !important;
+}
+
+.catalog__dropdown_grid {
+    display: grid !important;
+}
+
+.catalog__category {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__category_dog, .catalog__category_cat, .catalog__category_bird, .catalog__category_rodent, .catalog__category_fish, .catalog__category_reptile {
+    padding: 14px 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303361;
+    position: relative;
+    transition: all 0.1s ease 0s;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 295px;
+    margin-bottom: 10px;
+}
+
+.catalog__category_dog::after, .catalog__category_cat::after, .catalog__category_bird::after, .catalog__category_rodent::after, .catalog__category_fish::after, .catalog__category_reptile::after {
+    content: url(../img/categories/arrow-grey.svg);
+    right: 20px;
+    position: absolute;
+}
+
+.catalog__category_dog:hover::after, .catalog__category_cat:hover::after, .catalog__category_bird:hover::after, .catalog__category_rodent:hover::after, .catalog__category_fish:hover::after, .catalog__category_reptile:hover::after {
+    content: url(../img/main/arrow-blue-after.svg);
+    right: 20px;
+    position: absolute;
+}
+
+.catalog__category_dog {
+    background: #FFFFFF url(../img/categories/sm-dog_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_dog:hover {
+    background: #FAF9FE url(../img/categories/sm-dog.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_cat {
+    background: #FFFFFF url(../img/categories/sm-cat_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_cat:hover {
+    background: #FAF9FE url(../img/categories/sm-cat.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_bird {
+    background: #FFFFFF url(../img/categories/sm-bird_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_bird:hover {
+    background: #FAF9FE url(../img/categories/sm-bird.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_rodent {
+    background: #FFFFFF url(../img/categories/sm-mouse_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_rodent:hover {
+    background: #FAF9FE url(../img/categories/sm-mouse.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_fish {
+    background: #FFFFFF url(../img/categories/sm-fish_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_fish:hover {
+    background: #FAF9FE url(../img/categories/sm-fish.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_reptile {
+    background: #FFFFFF url(../img/categories/sm-chameleon_y.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__category_reptile:hover {
+    background: #FAF9FE url(../img/categories/sm-chameleon.svg) 25px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.catalog__submenu_grid {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+.catalog__list_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #303361;
+    padding-bottom: 5px;
+}
+
+.catalog__list_item {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #303361;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.catalog__list_item:hover {
+    color: #FFC600;
+}
+
+.catalog__list_item:last-child {
+    padding-bottom: 20px;
 }
 
 .header__menu_about, .header__menu_delivery, .header__menu_brands, .header__menu_blog, .header__menu_econom {
@@ -479,6 +622,14 @@ a {
 
 .about__dropdown_ref {
     padding: 12px 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+}
+
+.about__dropdown_ref:hover {
+    color: #FFC600;
 }
 
 .about__dropdown_ref:not(:last-child) {

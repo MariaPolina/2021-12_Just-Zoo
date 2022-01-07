@@ -2,6 +2,7 @@
 var mobileDescriptionOpen = false;
 var mobileSpecificationOpen = false;
 var mobileRewievOpen = false;
+var headerMenu = false;
 
 $(document).ready(function () {
 
@@ -111,6 +112,25 @@ $(document).ready(function () {
         $('.callback__dropdown').slideToggle(300);
         $('.callback__dropdown').css('display', 'flex');
     });
+
+    $('.header__menu_catalog').on('click', function (event) {
+        if (headerMenu) {
+            headerMenu = false;
+            $('.catalog__dropdown').removeClass('catalog__dropdown_grid').removeClass('catalog__dropdown_open');
+            $('#submenu-content').html('');
+        } else {
+            headerMenu = true;
+            $('.catalog__dropdown').removeClass('catalog__dropdown_grid').addClass('catalog__dropdown_open');
+        }
+    });
+
+    $('.open-submenu').on('mouseover', function () {
+        var chooseClass = $(this).attr('id');
+        var html = '<div class="catalog__submenu_grid">' + $('.' + chooseClass).html() + '</div>';
+        $('#submenu-content').html(html);
+        $('.catalog__dropdown').removeClass('catalog__dropdown_open').addClass('catalog__dropdown_grid');
+    })
+
 });
 
 $(window).resize(function () {
