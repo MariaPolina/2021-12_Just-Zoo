@@ -1836,8 +1836,8 @@ a {
 
     .goods-card__rating {
         grid-area: stars;
-        display: grid;
-        grid-auto-flow: column;
+        display: flex;
+        flex-direction: row;
         margin-bottom: 15px;
     }
 
@@ -1847,6 +1847,7 @@ a {
         height: 12x;
         background: #FFFFFF url(../img/goods/star-grey.svg) center center no-repeat;
         background-size: contain;
+        margin-right: 4px;
     }
 
     .goods-card__rating_star.active {
@@ -1855,6 +1856,7 @@ a {
         height: 12px;
         background: #FFFFFF url(../img/goods/star-yellow.svg) center center no-repeat;
         background-size: contain;
+        margin-right: 4px;
     }
 
     .goods-card__rating_number {
@@ -6744,8 +6746,77 @@ input[type=range]::-moz-range-thumb {
 
 /*------end of description-review tabs--------*/
 
-
 /*------end of product page--------*/
+
+/*------favorites page--------*/
+
+.favorites__wrapper {
+    position: relative;
+}
+
+.favorites__close {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    z-index: 2;
+    background: rgba(154, 170, 186, 0.4) url(../img/favorites/close.svg) center center no-repeat;
+    cursor: pointer;
+}
+
+.favorites__close:hover {
+    background: #FBC400 url(../img/favorites/close.svg) center center no-repeat;
+}
+
+.favorites__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-auto-rows: 1fr;
+    row-gap: 45px;
+    column-gap: 55px;
+}
+
+.favorites__return {
+    margin: 70px 0 90px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #303361;
+    cursor: pointer;
+}
+
+.favorites__return::before {
+    content: url(../img/favorites/arrow-blue-back.svg);
+    margin-right: 10px;
+}
+
+@media (max-width: 1330px) {
+    .favorites__items {
+        row-gap: 15px;
+    }
+
+    .favorites__return {
+        display: inline-block;
+        margin: 20px auto 55px auto;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    .favorites__return_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .favorites__return::before {
+        content: url(../img/favorites/arrow-blue-back-s.svg);
+    }
+}
+
+/*------end of favorites page--------*/
 
 /*------end of CONTENT--------*/
 
