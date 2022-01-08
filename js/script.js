@@ -3,6 +3,8 @@ var mobileDescriptionOpen = false;
 var mobileSpecificationOpen = false;
 var mobileRewievOpen = false;
 var headerMenu = false;
+var burgerOpen = false;
+
 
 $(document).ready(function () {
 
@@ -103,13 +105,13 @@ $(document).ready(function () {
 
     $('.header__menu_about').on('click', function (event) {
         $(this).toggleClass('active');
-        $('.about__dropdown').slideToggle(300);
+        $('.about__dropdown').slideToggle(200);
         $('.about__dropdown').css('display', 'flex');
     });
 
     $('.callback__number').on('click', function (event) {
         $(this).toggleClass('active');
-        $('.callback__dropdown').slideToggle(300);
+        $('.callback__dropdown').slideToggle(200);
         $('.callback__dropdown').css('display', 'flex');
     });
 
@@ -129,7 +131,45 @@ $(document).ready(function () {
         var html = '<div class="catalog__submenu_grid">' + $('.' + chooseClass).html() + '</div>';
         $('#submenu-content').html(html);
         $('.catalog__dropdown').removeClass('catalog__dropdown_open').addClass('catalog__dropdown_grid');
-    })
+    });
+
+    $('.burger').on('click', function () {
+        if (burgerOpen) {
+            burgerOpen = false;
+            $('.shadow').remove();
+            $('.burger__wrapper').remove();
+            $('body,html').css('overflow-y', 'auto');
+        } else {
+            burgerOpen = true;
+            var html = '<div class="shadow"></div>';
+            html += '<div class="burger__wrapper"><div class="burger__default"><div class="burger__top"><div class="burger__top_logo"></div>';
+            html += '<div class="header__info_language language">' + $('.header__info_language').html() + '</div>';
+
+            html += '<button class="burger__top_login" type="button">Увійти</button><div class="burger__top_close"></div></div><div class="header__main_search search">';
+            html += '<div class="search__form">' + $('.search__form').html() + '</div> </div>';
+            html += '<div class="burger__main"><div class="burger__main_basket">' + textCart + '<span class="burger__main_goods">' + $('.header__main_goods').text() + '</span><span class="burger__main_cash">' + cartPrice + '</span></div><div class="burger__main_choosed">' + choosedGoods + '</div><div class="burger__main_compare">' + compareGoods + '</div></div>';
+            html += '<div class="burger__econom"><div class="burger__econom_bonus">' + bonusNumber + '<span class="burger__econom_bonus-date">' + bonusUntill + '</span></div><div class="burger__econom_club">' + economProgramm + '</div><div class="burger__econom_more">' + economInfo + '</div></div>';
+            html += '<div class="burger__menu"><div class="burger__menu_title">' + parts + '</div>';
+            html += ' <div class="burger__menu_items">' + $('.catalog__category').html() + '</div>';
+            html += '<a class="burger__menu_title" href="' + $('.header__menu_blog').attr('href') + '">' + $('.header__menu_blog').text() + '</a>';
+            $('.footer__information > .footer__information_item').each(function () {
+                html += '<a class="burger__menu_title" href="' + $(this).attr('href') + '">' + $(this).text() + '</a>';
+            });
+            html += '</div><div class="burger__contacts">';
+            html += '<a class="footer__contacts_number" href="' + $('.footer__contacts_number').attr('href') + '">' + $('.footer__contacts_number').text() + '</a>';
+            html += ' <div class="footer__social">' + $('.footer__social').html() + '</div>';
+            html += '</div></div>';
+
+            $('body').prepend(html);
+            $('.burger__top_close').on('click', function () {
+                $('.burger').trigger('click');
+            });
+            $('body,html').css('overflow-y', 'hidden');
+
+
+        }
+
+    });
 
 });
 

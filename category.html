@@ -27,7 +27,7 @@
                     <div class="header__info_hours">Пн Пт 09:00 - 18:00</div>
                     <div class="header__info_sale">Знижки у клубі 3 - 15%</div>
                     <form class="header__info_language language" action="#" name="language">
-                        <button class="language_ua language active" type="button" name="ua">UA</button>
+                        <button class="language_ua active" type="button" name="ua">UA</button>
                         <button class="language_ru" type="button" name="ru">RU</button>
                     </form>
                 </div>
@@ -88,9 +88,15 @@
                     </form>
                 </div>
                 <div class="header__main_callback callback">
-                    <button class="callback__button" type="button" name="call"></button>
-                    <a class="callback__number" href="tel:+380685396078">+38 (068) 539 60 78</a>
+                    <div class="callback__button"></div>
+                    <div class="callback__number">+38 (068) 539 60 78</div>
                     <a class="callback__text" href="#">Замовити зворотній дзвінок</a>
+                </div>
+                <div class="callback__dropdown">
+                    <div class="dropdown__title">Консультація менеджерів</div>
+                    <a class="dropdown__tel" href="tel:+380685396078">+38 (068) 539 60 78</a>
+                    <a class="dropdown__viber" href="#">+38 (068) 539 60 78</a>
+                    <a class="dropdown__ref" href="#">Запитання та відповіді</a>
                 </div>
                 <div class="header__main_compare"></div>
                 <div class="header__main_choosed"></div>
@@ -98,9 +104,109 @@
                 <div class="header__main_basket"><span class="header__main_goods">68</span></div>
             </div>
             <div class="header__menu _container">
-                <a class="header__menu_catalog catalog" href="#">Каталог товарів</a>
+                <div class="header__menu_catalog catalog">Каталог товарів</div>
+                <div class="catalog__dropdown">
+                    <div class="catalog__category">
+                        <div class="open-submenu catalog__category_dog" id="catalog__dog">Собаки</div>
+                        <div class="open-submenu catalog__category_cat" id="catalog__cat">Коти</div>
+                        <div class="open-submenu catalog__category_bird" id="catalog__bird">Папуги</div>
+                        <div class="open-submenu catalog__category_rodent" id="catalog__rodent">Гризуни</div>
+                        <div class="open-submenu catalog__category_fish" id="catalog__fish">Рибки</div>
+                        <div class="open-submenu catalog__category_reptile" id="catalog__reptile">Рептилії</div>
+                    </div>
+                    <div id="submenu-content"></div>
+                </div>
+                <div style="display: none;">
+                    <div class="catalog__dog">
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Харчування собак</h4>
+                            <a class="catalog__list_item" href="#">Сухі корми для собак</a>
+                            <a class="catalog__list_item" href="#">Консерви та вологі корми</a>
+                            <a class="catalog__list_item" href="#">Ласощі для собак</a>
+                            <a class="catalog__list_item" href="#">Лікувальні корми</a>
+                            <a class="catalog__list_item" href="#">Замінники собачого молока</a>
+                            <a class="catalog__list_item" href="#">Миски та поїлки для собак</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Догляд за собаками</h4>
+                            <a class="catalog__list_item" href="#">Інструменти по догляду за собаками</a>
+                            <a class="catalog__list_item" href="#">Шампуні та косметика</a>
+                            <a class="catalog__list_item" href="#">Догляд за очима</a>
+                            <a class="catalog__list_item" href="#">Догляд за вухами</a>
+                            <a class="catalog__list_item" href="#">Догляд за лапами</a>
+                            <a class="catalog__list_item" href="#">Догляд за зубами та ротовою порожниною</a>
+                            <a class="catalog__list_item" href="#">Догляд за шкірою та шерстю</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Дім та подорожі</h4>
+                            <a class="catalog__list_item" href="#">Іграшки для собак</a>
+                            <a class="catalog__list_item" href="#">Переноски і сумки для собак</a>
+                            <a class="catalog__list_item" href="#">Вольєри та клітки для собак</a>
+                            <a class="catalog__list_item" href="#">Лежаки та хатинки</a>
+                            <a class="catalog__list_item" href="#">Аксесуари для авто</a>
+                            <a class="catalog__list_item" href="#">Терморегулюючі коврики</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Здоров’я та лікування</h4>
+                            <a class="catalog__list_item" href="#">Засоби від бліх і кліщів для собак</a>
+                            <a class="catalog__list_item" href="#">Засоби від глистів для собак</a>
+                            <a class="catalog__list_item" href="#">Вітаміни для собак</a>
+                            <a class="catalog__list_item" href="#">Ветпрепарати для собак</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Амуніція та аксесуари</h4>
+                            <a class="catalog__list_item" href="#">Повідки для собак</a>
+                            <a class="catalog__list_item" href="#">Повідки - рулетки</a>
+                            <a class="catalog__list_item" href="#">Шлеї для собак</a>
+                            <a class="catalog__list_item" href="#">Ошийники для собак</a>
+                            <a class="catalog__list_item" href="#">Намордники для собак</a>
+                            <a class="catalog__list_item" href="#">Адресники та брелки для собак</a>
+                            <a class="catalog__list_item" href="#">Сумки для ласощів та дресирування собак</a>
+                            <a class="catalog__list_item" href="#">Одяг для собак</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Гігієна дому та корекція поведінки</h4>
+                            <a class="catalog__list_item" href="#">Туалети вдома і пакети для прогулянок</a>
+                            <a class="catalog__list_item" href="#">Видалення запаху та плям</a>
+                            <a class="catalog__list_item" href="#">Пеленки та підгузники для собак</a>
+                            <a class="catalog__list_item" href="#">Засоби для корекції поведінки</a>
+                        </div>
+                    </div>
+                    <div class="catalog__cat">
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Харчування котив</h4>
+                            <a class="catalog__list_item" href="#">Сухі корми для котив</a>
+                            <a class="catalog__list_item" href="#">Консерви та вологі корми</a>
+                            <a class="catalog__list_item" href="#">Ласощі для котив</a>
+                            <a class="catalog__list_item" href="#">Лікувальні корми</a>
+                            <a class="catalog__list_item" href="#">Миски та поїлки для котив</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Дім та подорожі</h4>
+                            <a class="catalog__list_item" href="#">Іграшки для котив</a>
+                            <a class="catalog__list_item" href="#">Переноски і сумки для котив</a>
+                            <a class="catalog__list_item" href="#">Вольєри та клітки для котив</a>
+                        </div>
+                        <div class="catalog__list">
+                            <h4 class="catalog__list_title">Здоров’я та лікування</h4>
+                            <a class="catalog__list_item" href="#">Засоби від бліх і кліщів для котив</a>
+                            <a class="catalog__list_item" href="#">Засоби від глистів для котив</a>
+                            <a class="catalog__list_item" href="#">Вітаміни для котив</a>
+                            <a class="catalog__list_item" href="#">Ветпрепарати для котив</a>
+                        </div>
+                    </div>
+                    <div class="catalog__bird"></div>
+                    <div class="catalog__rodent"></div>
+                    <div class="catalog__fish"></div>
+                    <div class="catalog__reptile"></div>
+                </div>
                 <div class="header__menu_list">
-                    <a class="header__menu_about" href="#">Про нас</a>
+                    <div class="header__menu_about">Про нас</div>
+                    <div class="about__dropdown">
+                        <a class="about__dropdown_ref" href="#">Перша сторінка</a>
+                        <a class="about__dropdown_ref" href="#">Друга сторінка</a>
+                        <a class="about__dropdown_ref" href="#">Друга сторінка сторінка</a>
+                    </div>
                     <a class="header__menu_delivery" href="#">Доставка і Оплата</a>
                     <a class="header__menu_econom" href="#">Як зекономити</a>
                     <a class="header__menu_brands" href="#">Бренди</a>
