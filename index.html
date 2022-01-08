@@ -36,35 +36,74 @@
             <div class="header__main _container">
                 <div class="burger"><span></span></div>
                 <div class="burger__wrapper">
-                    <div class="burger__top">
-                        <div class="burger__top_logo"></div>
-                        <form class="header__info_language language" action="#" name="language">
-                            <button class="language_ua active" type="button" name="ua">UA</button>
-                            <button class="language_ru" type="button" name="ru">RU</button>
-                        </form>
-                        <button class="burger__top_login" type="button">Увійти</button>
-                        <div class="burger__top_close"></div>
+                    <div class="burger__default">
+                        <div class="burger__top">
+                            <div class="burger__top_logo"></div>
+                            <form class="header__info_language language" action="#" name="language">
+                                <button class="language_ua active" type="button" name="ua">UA</button>
+                                <button class="language_ru" type="button" name="ru">RU</button>
+                            </form>
+                            <button class="burger__top_login" type="button">Увійти</button>
+                            <div class="burger__top_close"></div>
+                        </div>
+                        <div class="header__main_search search">
+                            <form class="search__form" action="#" method="GET">
+                                <input class="search__form_input" type="search" placeholder="Шукати товар">
+                                <button class="search__form_button" type="submit"></button>
+                            </form>
+                        </div>
+                        <div class="burger__main">
+                            <div class="burger__main_basket">Кошик<span class="burger__main_goods">68</span><span
+                                    class="burger__main_cash">250₴</span></div>
+                            <div class="burger__main_choosed">Обрані товари</div>
+                            <div class="burger__main_compare">Порівняння</div>
+                        </div>
+                        <div class="burger__econom">
+                            <div class="burger__econom_bonus">60 бонусів<span class="burger__econom_bonus-date">дійсних
+                                    до
+                                    21/03/22</span></div>
+                            <div class="burger__econom_club">Клубна програма «Для своїх» <br> від 3 до 10% економії
+                            </div>
+                            <div class="burger__econom_more">Дізнатися як зекономити</div>
+                        </div>
+                        <div class="burger__menu">
+                            <a class="burger__menu_title" href="#">Рубрики</a>
+                            <div class="burger__menu_items">
+                                <div class="open-submenu catalog__category_dog" id="catalog__dog">Собаки</div>
+                                <div class="open-submenu catalog__category_cat" id="catalog__cat">Коти</div>
+                                <div class="open-submenu catalog__category_bird" id="catalog__bird">Папуги</div>
+                                <div class="open-submenu catalog__category_rodent" id="catalog__rodent">Гризуни</div>
+                                <div class="open-submenu catalog__category_fish" id="catalog__fish">Рибки</div>
+                                <div class="open-submenu catalog__category_reptile" id="catalog__reptile">Рептилії</div>
+                            </div>
+                            <a class="burger__menu_title" href="#">Публікації</a>
+                            <a class="burger__menu_title" href="#">Про нас</a>
+                            <a class="burger__menu_title" href="#">Оплата і доставка</a>
+                            <a class="burger__menu_title" href="#">Чому з нами вигідно</a>
+                        </div>
+                        <div class="burger__contacts">
+                            <a class="footer__contacts_number" href="tel:+380685396078">+38 (068) 539 60 78</a>
+                            <div class="footer__social">
+                                <a class="footer__social_instagram" href="#"></a>
+                                <a class="footer__social_facebook" href="#"></a>
+                                <a class="footer__social_youtube" href="#"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header__main_search search">
-                        <form class="search__form" action="#" method="GET">
-                            <input class="search__form_input" type="search" placeholder="Шукати товар">
-                            <button class="search__form_button" type="submit"></button>
-                        </form>
-                    </div>
-                    <div class="burger__main">
-                        <div class="burger__main_basket">Кошик<span class="burger__main_goods">68</span><span
-                                class="burger__main_cash">250₴</span></div>
-                        <div class="burger__main_choosed">Обрані товари</div>
-                        <div class="burger__main_compare">Порівняння</div>
-                    </div>
-                    <div class="burger__econom">
-                        <div class="burger__econom_bonus">60 бонусів<span class="burger__econom_bonus-date">дійсних до
-                                21/03/22</span></div>
-                        <div class="burger__econom_club">Клубна програма «Для своїх» <br> від 3 до 10% економії</div>
-                        <div class="burger__econom_more">Дізнатися як зекономити</div>
-                    </div>
-                    <div class="burger__menu">
-                        <a class="burger__menu_title" href="#">Рубрики</a>
+                    <div class="burger__category">
+                        <div class="burger__top">
+                            <div class="burger__top_logo"></div>
+                            <div class="burger__top_return">Повернутись до головного меню</div>
+                            <div class="burger__top_close"></div>
+                        </div>
+                        <div class="burger__category_items">
+                            <h4 class="catalog__list_title">Харчування собак</h4>
+                            <h4 class="catalog__list_title">Догляд за собаками</h4>
+                            <h4 class="catalog__list_title">Дім та подорожі</h4>
+                            <h4 class="catalog__list_title">Здоров’я та лікування</h4>
+                            <h4 class="catalog__list_title">Амуніція та аксесуари</h4>
+                            <h4 class="catalog__list_title">Гігієна дому та корекція поведінки</h4>
+                        </div>
                         <div class="burger__menu_items">
                             <div class="open-submenu catalog__category_dog" id="catalog__dog">Собаки</div>
                             <div class="open-submenu catalog__category_cat" id="catalog__cat">Коти</div>
@@ -72,18 +111,6 @@
                             <div class="open-submenu catalog__category_rodent" id="catalog__rodent">Гризуни</div>
                             <div class="open-submenu catalog__category_fish" id="catalog__fish">Рибки</div>
                             <div class="open-submenu catalog__category_reptile" id="catalog__reptile">Рептилії</div>
-                        </div>
-                        <a class="burger__menu_title" href="#">Публікації</a>
-                        <a class="burger__menu_title" href="#">Про нас</a>
-                        <a class="burger__menu_title" href="#">Оплата і доставка</a>
-                        <a class="burger__menu_title" href="#">Чому з нами вигідно</a>
-                    </div>
-                    <div class="burger__contacts">
-                        <a class="footer__contacts_number" href="tel:+380685396078">+38 (068) 539 60 78</a>
-                        <div class="footer__social">
-                            <a class="footer__social_instagram" href="#"></a>
-                            <a class="footer__social_facebook" href="#"></a>
-                            <a class="footer__social_youtube" href="#"></a>
                         </div>
                     </div>
                 </div>

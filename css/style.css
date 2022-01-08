@@ -692,6 +692,8 @@ a {
         display: none;
     }
 
+    /*------Burger button--------*/
+
     .burger {
         cursor: pointer;
         grid-area: burger;
@@ -730,8 +732,10 @@ a {
         transition: all 0.3s ease 0s;
     }
 
+    /*------Burger Menu--------*/
+
     .burger__wrapper {
-        display: block;
+        display: none;
         position: absolute;
         top: -20px;
         left: 0;
@@ -739,7 +743,26 @@ a {
         padding: 20px 15px;
         z-index: 101;
         overflow: auto !important;
-        height: 100vh;
+        max-height: 100vh;
+        scrollbar-color: #303361 #F2F1F5;
+        scrollbar-width: thin;
+        padding-bottom: 15px;
+    }
+
+    .burger__default {
+        display: none;
+    }
+
+    .burger__wrapper::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: #F2F1F5;
+        border-radius: 15px;
+    }
+
+    .burger__wrapper::-webkit-scrollbar-thumb {
+        background: #303361;
+        border-radius: 15px;
     }
 
     .burger__top {
@@ -800,6 +823,7 @@ a {
         height: 15px;
         background: rgba(250, 249, 254, 0) url(../img/header/close-burger.svg) center center no-repeat;
         margin-left: 50px;
+        cursor: pointer;
     }
 
     .burger__wrapper .header__main_search {
@@ -996,6 +1020,53 @@ a {
         height: 20px;
         background-size: contain;
     }
+
+    .burger__category {
+        display: none;
+    }
+
+    .burger__top_return {
+        background: rgba(154, 170, 186, 0.6) url(../img/header/burger_arrow_back.svg) 12px center no-repeat;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 10px;
+        padding: 9px 12px 9px 25px;
+        margin-left: 15px;
+        text-align: right;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .burger__category .burger__top_close {
+        margin-left: 11px;
+    }
+
+    .catalog__list_title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 32px;
+        color: #FFFFFF;
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .catalog__list_title::after {
+        content: url(../img/header/burger_arrow_w_d.svg);
+        margin-left: 7px;
+    }
+
+    .catalog__list_title.active::after {
+        content: url(../img/header/burger_arrow_w_u.svg);
+    }
+
+    .catalog__list_item {
+        font-size: 12px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    /*------End of Burger Menu--------*/
 
     .header__main {
         display: grid;
