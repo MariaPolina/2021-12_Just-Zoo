@@ -166,9 +166,44 @@ $(document).ready(function () {
             });
             $('body,html').css('overflow-y', 'hidden');
 
+            $('.burger__menu_items>div').on('click', function () {
+
+                $('.burger__menu_items .open-submenu').addClass('not-active');
+                $(this).removeClass('not-active');
+
+                $('.burger__category_items').remove();
+                $('.burger__top_return').remove();
+                $('.search__form, .burger__main, .burger__econom, .burger__menu_title, .burger__contacts').hide();
+                $('.header__info_language, .burger__top_login').css('display', 'none');
+                html = '<div class="burger__category_items">';
+                var burgerClassSubmenuName = '.' + $(this).attr('id');
+                $(burgerClassSubmenuName + ' .catalog__list').each(function () {
+
+                    html += $(this).html();
+
+                });
+
+                html += '</div>';
+
+                $('.burger__menu_items').before(html);
+                $('.burger__top_logo').after('<div class="burger__top_return">' + burgerReturnButton + '</div>');
+                $('.burger__top_return').on('click', function () {
+                    $('.burger__category_items').remove();
+                    $('.burger__menu_items>div').removeClass('not-active');
+                    $('.search__form, .burger__main, .burger__econom, .burger__menu_title, .burger__contacts').show();
+                    $('.header__info_language, .burger__top_login').css('display', 'flex');
+                    $(this).remove();
+                });
+
+                $('.burger__category_items .catalog__list_title').on('click', function () {
+                    $('.burger__category_items .catalog__list_title').removeClass('active');
+                    $('.burger__category_items h4+div').css('display', 'none');
+                    $($(this).next()).show(0);
+                    $(this).addClass('active');
+                });
+            });
 
         }
-
     });
 
 });
@@ -180,6 +215,14 @@ $(window).resize(function () {
         $('.product-description_specification_items').css('display', 'grid');
         $('.product-review').css('display', 'none');
         $('.description__button').trigger('click');
+
+        if (burgerOpen) {
+            burgerOpen = false;
+            $('.shadow').remove();
+            $('.burger__wrapper').remove();
+            $('body,html').css('overflow-y', 'auto');
+        }
+
     } else {
         mobileDescriptionOpen = false;
         $('.description__button').removeClass('active');
