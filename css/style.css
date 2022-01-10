@@ -84,8 +84,6 @@ a {
 
 /*------general--------*/
 
-
-
 .shadow::before {
     content: " ";
     width: 100%;
