@@ -4,9 +4,59 @@ var mobileSpecificationOpen = false;
 var mobileRewievOpen = false;
 var headerMenu = false;
 var burgerOpen = false;
+var modalWrapper = false
 
 
 $(document).ready(function () {
+
+
+
+    $('.product-card__purchase_1click, .goods-card__buy_1click, .comparison__item_purchase_1click').on('click', function () {
+        if (modalWrapper) {
+            $(this).attr('id', '');
+            modalWrapper = false;
+            $('.modal__wrapper').remove();
+        } else {
+            modalWrapper = true;
+            $(this).attr('id', 'closeModal');
+            var html = '<div class="modal__wrapper">';
+            html += '<div class="modal__1click">';
+            html += '<div class="close-modal"></div>';
+            html += '<div class="modal__1click_initial"><p class="modal__1click_text">' + modalTelInput + '</p><div class="modal__1click_input"><input type="tel" name="1click-tel" id="1click-tel" placeholder="+38 (0__) ____ __ __"><button class="modal__1click_button">' + modalBuyButton + '</button></div></div>';
+            html += '</div></div>';
+
+            $('body').prepend(html);
+            $('.modal__1click_input input').inputmask({ "mask": "+38 (099) 999 99 99" });
+
+            $('.close-modal').on('click', function () {
+                $('#closeModal').trigger('click');
+            });
+
+            $('.modal__1click_button').on('click', function () {
+                var telNumber = $('#1click-tel').val();
+
+                $.ajax({
+                    url: 'ajax/test.html',
+                    type: "POST",
+                    data: "clientTelNumber=" + telNumber,
+                    success: function (message) {
+                        if (message) {
+
+                            var html = '<div class="modal__1click_after"><div class="modal__1click_ok"></div><p class="modal__1click_ok-text">' + modalSuccess + '</p></div>';
+                            $('.modal__1click_initial').remove();
+                            $('.close-modal').after(html);
+
+                        } else {
+
+                        }
+                    }
+                });
+
+            });
+        }
+
+    });
+
 
     $('#addtext').on('click', function (event) {
         $('.description__text').addClass('active');

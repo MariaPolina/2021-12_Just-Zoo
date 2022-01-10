@@ -7573,6 +7573,144 @@ input[type=range]::-moz-range-thumb {
 
 /*------end of FOOTER--------*/
 
+/*------modal window--------*/
+
+.modal__wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 51, 97, 0.24);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__1click {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px 40px;
+}
+
+.close-modal {
+    float: right;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    background: #FFFFFF url(../img/product/close-modal.svg) center center no-repeat;
+}
+
+.modal__1click_text, .modal__1click_ok-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #303361;
+    text-align: center;
+    margin: 20px auto 30px auto;
+    max-width: 370px;
+}
+
+.modal__1click_input {
+    border: 1px solid rgba(154, 170, 186, 0.2);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin-bottom: 35px;
+}
+
+.modal__1click_input input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303361;
+}
+
+.modal__1click_input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303361;
+}
+
+.modal__1click_button {
+    border: 2px solid #FBC400;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #303361;
+    padding: 15px 50px;
+}
+
+.modal__1click_ok {
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF url(../img/product/ok-modal.svg) center center no-repeat;
+    margin: 60px auto 10px auto;
+}
+
+@media (max-width: 1330px) {
+
+    .modal__1click {
+        border-radius: 14px;
+        padding: 20px 10px;
+    }
+
+    .modal__1click_text, .modal__1click_ok-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 20px auto 15px auto;
+        max-width: 280px;
+    }
+
+    .modal__1click_input {
+        border: none;
+        border-radius: 0px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .modal__1click_input input {
+        font-size: 12px;
+        line-height: 15px;
+        border: 1px solid rgba(154, 170, 186, 0.2);
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding: 15px;
+        margin-bottom: 8px;
+    }
+
+    .modal__1click_input::placeholder {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .modal__1click_button {
+        border: 1px solid #FBC400;
+        font-size: 12px;
+        line-height: 24px;
+        padding: 10px 50px;
+    }
+
+    .modal__1click_ok {
+        margin: 40px auto 10px auto;
+    }
+}
+
+/*------end of modal window--------*/
+
 /* ----- corrections for sliders -----*/
 
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
