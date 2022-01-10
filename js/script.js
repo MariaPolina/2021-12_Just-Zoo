@@ -206,6 +206,11 @@ $(document).ready(function () {
         }
     });
 
+    $('.parameters-mob__name').on('click', function (event) {
+        $($(this).next()).slideToggle(300);
+        $(this).toggleClass('active');
+    });
+
 });
 
 $(window).resize(function () {
