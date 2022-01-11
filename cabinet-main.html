@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Zoo - Cписок Порівнянь</title>
+    <title>Just Zoo - Мій кабінет</title>
     <link rel="shortcut icon" href="img/icon.png">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/script.js"></script>
@@ -248,271 +248,68 @@
         <div class="content content-border">
             <ul class="breadcrumbs _container">
                 <li><a href="#">Головна</a></li>
-                <li><a href="#">список Порівнянь</a></li>
+                <li><a href="#">Особистий кабінет</a></li>
             </ul>
-            <div class="comparison _container">
-                <div class="comparison__type">
-                    <div class="comparison__type_all">Усі параметри</div>
-                    <div class="comparison__type_unique">Тільки відмінності</div>
+            <div class="cabinet _container">
+                <div class="cabinet__menu">
+                    <div class="cabinet__menu_item_active cabinet__menu_my_active">Мій кабінет</div>
+                    <div class="cabinet__menu_wrapper">
+                        <div class="cabinet__menu_item cabinet__menu_my active">Мій кабінет</div>
+                        <div class="cabinet__menu_item cabinet__menu_personal">Особиста інформація</div>
+                        <div class="cabinet__menu_item cabinet__menu_history">Історія замовлень</div>
+                        <div class="cabinet__menu_item cabinet__menu_address">Адресна книга</div>
+                        <div class="cabinet__menu_item cabinet__menu_pet">Мої улюбленці</div>
+                        <div class="cabinet__menu_item cabinet__menu_bonus">Бонусні бали</div>
+                        <div class="cabinet__menu_item cabinet__menu_review">Відгуки про товари</div>
+                        <div class="cabinet__menu_item cabinet__menu_subscription">Підписки</div>
+                        <div class="cabinet__menu_item cabinet__menu_password">Змінити пароль</div>
+                    </div>
                 </div>
-                <div class="comparison__items">
-                    <div class="comparison__wrapper">
-                        <div class="comparison__close"></div>
-                        <div class="comparison__items_item">
-                            <div class="comparison__item_image"><img class="goods-card__image"
-                                    src="img/product/product.jpg" alt="Josera Active Nature"></div>
-                            <div class="goods-card__title">Josera Active Nature
+                <div class="cabinet__content">
+                    <div class="cabinet__content_my">
+                        <div class="cabinet__user-name">Роман</div>
+                        <div class="cabinet__welcome">Вітаємо у кабінеті.</div>
+                        <div class="cabinet__welcome-info">Тут Ви можете відслідковувати історію Ваших покупок, залишати
+                            відгуки, робити повторні замовлення</div>
+                        <div class="cabinet__user-info">
+                            <div class="cabinet__user-info_column">
+                                <p>Група </p><span>?</span>
                             </div>
-                            <div class="goods-card__price_new">143 грн</div>
-                            <div class="goods-card__option goods-card__option">
-                                900 г</div>
-                            <div class="comparison__item_weighting">
-                                <span class="product-card__weighting_name">Кількість:</span>
-                                <div class="product-card__number">
-                                    <span class="product-card__number_minus">&minus;</span>
-                                    <span class="product-card__number_number">1</span>
-                                    <span class="product-card__number_plus">&plus;</span>
-                                </div>
+                            <div class="cabinet__user-info_meaning">
+                                <p>Заводчики</p>
                             </div>
-                            <div class="comparison__item_purchase">
-                                <button class="product-card__purchase_buy">в кошик</button>
-                                <button class="comparison__item_purchase_1click">в 1 клік</button>
+                            <div class="cabinet__user-info_column">
+                                <p>Рівень знижки </p><span>?</span>
+                            </div>
+                            <div class="cabinet__user-info_meaning">
+                                <p>3% <span>покупок на суму 3409 грн</span></p>
+                            </div>
+                            <div class="cabinet__user-info_column">
+                                <p>Ваші бонуси </p><span>?</span>
+                            </div>
+                            <div class="cabinet__user-info_meaning">
+                                <p>30 грн</p>
+                            </div>
+                        </div>
+                        <div class="cabinet__add-bonus">
+                            <h5>Отримайте бонуси, дозаповнивши профіль</h5>
+                            <div>
+                                <p>Додайте номер телефону </p> <span>+ 20 грн бонусів</span>
+                            </div>
+                            <div>
+                                <p>Додайте улюбленця </p> <span>+ 20 грн бонусів</span>
+                            </div>
+                            <div>
+                                <p>Додайте адресу доставки</p> <span>+ 20 грн бонусів</span>
+                            </div>
+                            <div>
+                                <p>Додайте дату народження</p> <span>+ 20 грн бонусів</span>
                             </div>
                         </div>
                     </div>
-                    <div class="comparison__wrapper">
-                        <div class="comparison__close"></div>
-                        <div class="comparison__items_item">
-                            <div class="comparison__item_image"><img class="goods-card__image"
-                                    src="img/product/product.jpg" alt="Josera Active Nature"></div>
-                            <div class="goods-card__title">Josera Active Nature
-                            </div>
-                            <div class="goods-card__price_new">143 грн</div>
-                            <div class="goods-card__option goods-card__option">
-                                900 г</div>
-                            <div class="comparison__item_weighting">
-                                <span class="product-card__weighting_name">Кількість:</span>
-                                <div class="product-card__number">
-                                    <span class="product-card__number_minus">&minus;</span>
-                                    <span class="product-card__number_number">1</span>
-                                    <span class="product-card__number_plus">&plus;</span>
-                                </div>
-                            </div>
-                            <div class="comparison__item_purchase">
-                                <button class="product-card__purchase_buy">в кошик</button>
-                                <button class="comparison__item_purchase_1click">в 1 клік</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comparison__wrapper">
-                        <div class="comparison__close"></div>
-                        <div class="comparison__items_item">
-                            <div class="comparison__item_image"><img class="goods-card__image"
-                                    src="img/product/product.jpg" alt="Josera Active Nature"></div>
-                            <div class="goods-card__title">Josera Active Nature
-                            </div>
-                            <div class="goods-card__price_new">143 грн</div>
-                            <div class="goods-card__option goods-card__option">
-                                900 г</div>
-                            <div class="comparison__item_weighting">
-                                <span class="product-card__weighting_name">Кількість:</span>
-                                <div class="product-card__number">
-                                    <span class="product-card__number_minus">&minus;</span>
-                                    <span class="product-card__number_number">1</span>
-                                    <span class="product-card__number_plus">&plus;</span>
-                                </div>
-                            </div>
-                            <div class="comparison__item_purchase">
-                                <button class="product-card__purchase_buy">в кошик</button>
-                                <button class="comparison__item_purchase_1click">в 1 клік</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comparison__wrapper">
-                        <div class="comparison__close"></div>
-                        <div class="comparison__items_item">
-                            <div class="comparison__item_image"><img class="goods-card__image"
-                                    src="img/product/product.jpg" alt="Josera Active Nature"></div>
-                            <div class="goods-card__title">Josera Active Nature
-                            </div>
-                            <div class="goods-card__price_new">143 грн</div>
-                            <div class="goods-card__option goods-card__option">
-                                900 г</div>
-                            <div class="comparison__item_weighting">
-                                <span class="product-card__weighting_name">Кількість:</span>
-                                <div class="product-card__number">
-                                    <span class="product-card__number_minus">&minus;</span>
-                                    <span class="product-card__number_number">1</span>
-                                    <span class="product-card__number_plus">&plus;</span>
-                                </div>
-                            </div>
-                            <div class="comparison__item_purchase">
-                                <button class="product-card__purchase_buy">в кошик</button>
-                                <button class="comparison__item_purchase_1click">в 1 клік</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comparison__wrapper">
-                        <div class="comparison__close"></div>
-                        <div class="comparison__items_item">
-                            <div class="comparison__item_image"><img class="goods-card__image"
-                                    src="img/product/product.jpg" alt="Josera Active Nature"></div>
-                            <div class="goods-card__title">Josera Active Nature
-                            </div>
-                            <div class="goods-card__price_new">143 грн</div>
-                            <div class="goods-card__option goods-card__option">
-                                900 г</div>
-                            <div class="comparison__item_weighting">
-                                <span class="product-card__weighting_name">Кількість:</span>
-                                <div class="product-card__number">
-                                    <span class="product-card__number_minus">&minus;</span>
-                                    <span class="product-card__number_number">1</span>
-                                    <span class="product-card__number_plus">&plus;</span>
-                                </div>
-                            </div>
-                            <div class="comparison__item_purchase">
-                                <button class="product-card__purchase_buy">в кошик</button>
-                                <button class="comparison__item_purchase_1click">в 1 клік</button>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                </div>
-                <div class="comparison__parameters parameters">
-                    <div class="parameters__list">
-                        <div class="parameters__list_name string1">Бренд</div>
-                        <div class="parameters__list_name string2">Упаковка</div>
-                        <div class="parameters__list_name string3">Клас</div>
-                        <div class="parameters__list_name string4">Призначення</div>
-                        <div class="parameters__list_name string5">Вік собаки</div>
-                        <div class="parameters__list_name string6">Розмір собаки</div>
-                        <div class="parameters__list_name string7">Упаковка</div>
-                    </div>
-                    <div class="parameters__items">
-                        <div class="parameters__items_item">
-                            <div class="parameters__item_point string1">Josera</div>
-                            <div class="parameters__item_point string2">900 г</div>
-                            <div class="parameters__item_point string3">Супер-преміум</div>
-                            <div class="parameters__item_point string4"> Повсякденний/ Для малоактивних Повсякденний/
-                                Для малоактивних </div>
-                            <div class="parameters__item_point string5">Дорослий вік</div>
-                            <div class="parameters__item_point string6">-</div>
-                            <div class="parameters__item_point string7">
-                                <p>Середні</p>
-                                <p>Великі</p>
-                                <p>Гіганти</p>
-                            </div>
-                        </div>
-                        <div class="parameters__items_item">
-                            <div class="parameters__item_point string1">Josera</div>
-                            <div class="parameters__item_point string2">900 г</div>
-                            <div class="parameters__item_point string3">Супер-преміум</div>
-                            <div class="parameters__item_point string4"> Повсякденний/ Для малоактивних</div>
-                            <div class="parameters__item_point string5">Дорослий вік</div>
-                            <div class="parameters__item_point string6">-</div>
-                            <div class="parameters__item_point string7">
-                                <p>Середні</p>
-                                <p>Великі</p>
-                                <p>Гіганти</p>
-                            </div>
-                        </div>
-                        <div class="parameters__items_item">
-                            <div class="parameters__item_point string1">Josera</div>
-                            <div class="parameters__item_point string2">900 г</div>
-                            <div class="parameters__item_point string3">Супер-преміум</div>
-                            <div class="parameters__item_point string4"> Повсякденний/ Для малоактивних</div>
-                            <div class="parameters__item_point string5">Дорослий вік</div>
-                            <div class="parameters__item_point string6">-</div>
-                            <div class="parameters__item_point string7">
-                                <p>Середні</p>
-                                <p>Великі</p>
-                                <p>Гіганти</p>
-                            </div>
-                        </div>
-                        <div class="parameters__items_item">
-                            <div class="parameters__item_point string1">Josera</div>
-                            <div class="parameters__item_point string2">900 г</div>
-                            <div class="parameters__item_point string3">Супер-преміум</div>
-                            <div class="parameters__item_point string4"> Повсякденний/ Для малоактивних</div>
-                            <div class="parameters__item_point string5">Дорослий вік</div>
-                            <div class="parameters__item_point string6">-</div>
-                            <div class="parameters__item_point string7">
-                                <p>Середні</p>
-                                <p>Великі</p>
-                                <p>Гіганти</p>
-                            </div>
-                        </div>
-                        <div class="parameters__items_item">
-                            <div class="parameters__item_point string1 last-column">Josera</div>
-                            <div class="parameters__item_point string2 last-column">900 г</div>
-                            <div class="parameters__item_point string3 last-column">Супер-преміум</div>
-                            <div class="parameters__item_point string4 last-column"> Повсякденний/ Для малоактивних
-                            </div>
-                            <div class="parameters__item_point string5 last-column">Дорослий вік</div>
-                            <div class="parameters__item_point string6 last-column">-</div>
-                            <div class="parameters__item_point string7 last-column">
-                                <p>Середні</p>
-                                <p>Великі</p>
-                                <p>Гіганти</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="comparison__parameters-mob parameters-mob">
-                    <div class="parameters-mob__name">Бренд</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Josera</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Josera</div>
-                    </div>
-                    <div class="parameters-mob__name">Упаковка</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">900 г</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">1100 г</div>
-                    </div>
-                    <div class="parameters-mob__name">Клас</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Супер-преміум</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Середній</div>
-                    </div>
-                    <div class="parameters-mob__name">Призначення</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Повсякденний/ Для малоактивних</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Повсякденний/ Для малоактивних</div>
-                    </div>
-                    <div class="parameters-mob__name">Вік собаки</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Дорослий вік</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Підлітковий вік</div>
-                    </div>
-                    <div class="parameters-mob__name">Розмір собаки</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">-</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">-</div>
-                    </div>
-                    <div class="parameters-mob__name">Упаковка</div>
-                    <div class="parameters-mob__items">
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Середні, великі, гіганти</div>
-                        <div class="parameters-mob__item_name">Корм Josera для середніх собак</div>
-                        <div class="parameters-mob__item">Середні, великі</div>
-                    </div>
-                </div>
-            </div>
-            <div class="favorites__return_container _container">
-                <div class="favorites__return">продовжити покупки</div>
-            </div>
         </div>
         <footer class="footer__wrapper">
             <div class="footer _container">
@@ -560,56 +357,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        $(document).ready(function () {
-            $('.string1').on('mouseover', function () {
-                $('.string1').addClass('active');
-            });
-            $('.string1').on('mouseout', function () {
-                $('.string1').removeClass('active');
-            });
-
-            $('.string4').on('mouseover', function () {
-                $('.string4').addClass('active');
-            });
-            $('.string4').on('mouseout', function () {
-                $('.string4').removeClass('active');
-            });
-
-            var heightString = 0;
-            $('.string1').each(function () {
-                var thisHeightString = $(this).height();
-                if (heightString < thisHeightString) {
-                    heightString = thisHeightString;
-                }
-            });
-            $('.string1').height(heightString);
-            $('.string2').each(function () {
-                var thisHeightString = $(this).height();
-                if (heightString < thisHeightString) {
-                    heightString = thisHeightString;
-                }
-            });
-            $('.string2').height(heightString);
-            $('.string3').each(function () {
-                var thisHeightString = $(this).height();
-                if (heightString < thisHeightString) {
-                    heightString = thisHeightString;
-                }
-            });
-            $('.string3').height(heightString);
-
-            $('.string4').each(function () {
-                var thisHeightString = $(this).height();
-                if (heightString < thisHeightString) {
-                    heightString = thisHeightString;
-                }
-            });
-            $('.string4').height(heightString);
-
-        });
-    </script>
 </body>
 
 </html>
