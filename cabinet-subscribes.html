@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Zoo - Мої улюбленці</title>
+    <title>Just Zoo - Мої підписки</title>
     <link rel="shortcut icon" href="img/icon.png">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/script.js"></script>
@@ -252,133 +252,98 @@
             </ul>
             <div class="cabinet _container">
                 <div class="cabinet__menu">
-                    <div class="cabinet__menu_item_active cabinet__menu_pet_active">Мої улюбленці</div>
+                    <div class="cabinet__menu_item_active cabinet__menu_subscription_active">Підписки</div>
                     <div class="cabinet__menu_wrapper">
                         <div class="cabinet__menu_item cabinet__menu_my">Мій кабінет</div>
                         <div class="cabinet__menu_item cabinet__menu_personal">Особиста інформація</div>
                         <div class="cabinet__menu_item cabinet__menu_history">Історія замовлень</div>
                         <div class="cabinet__menu_item cabinet__menu_address">Адресна книга</div>
-                        <div class="cabinet__menu_item cabinet__menu_pet active">Мої улюбленці</div>
+                        <div class="cabinet__menu_item cabinet__menu_pet">Мої улюбленці</div>
                         <div class="cabinet__menu_item cabinet__menu_bonus">Бонусні бали</div>
                         <div class="cabinet__menu_item cabinet__menu_review">Відгуки про товари</div>
-                        <div class="cabinet__menu_item cabinet__menu_subscription">Підписки</div>
+                        <div class="cabinet__menu_item cabinet__menu_subscription active">Підписки</div>
                         <div class="cabinet__menu_item cabinet__menu_password">Змінити пароль</div>
                     </div>
                 </div>
                 <div class="cabinet__content">
-                    <div class="cabinet__content_pet">
-                        <h1 class="cabinet-title">Мої улюбленці</h1>
-                        <div class="cabinet__text">Додані улюбленці</div>
-                        <div class="cabinet__pets">
-                            <div class="cabinet__pets_item-wrapper">
-                                <div class="cabinet__pets_item">
-                                    <div class="cabinet__pets_photo"><img src="../img/cabinet/pet-photo.jpg"
-                                            alt="Мої улюбленці"></div>
-                                    <div class="cabinet__pets_type">Собака:<span>Барон</span></div>
-                                    <div class="cabinet__pets_breed">Порода:<span>коргі</span></div>
-                                    <div class="cabinet__pets_sex">Стать:<span>хлопчик</span></div>
-                                </div>
-                                <div class="cabinet__pets_dell"></div>
+                    <div class="cabinet__content_subscription">
+                        <h1 class="cabinet-title">Мої підписки</h1>
+                        <div class="cabinet__text">Відмітьте галочками, які теми Вас цікавлять</div>
+                        <div class="cabinet__subscription">
+                            <div><input type="checkbox" class="subscription__promo checkbox-styled-blue" name="promo"
+                                    value="promo" id="promo"> <label for="promo">акції, новинки, корисні поради</label>
                             </div>
-                            <div class="cabinet__pets_item-wrapper">
-                                <div class="cabinet__pets_item">
-                                    <div class="cabinet__pets_photo"></div>
-                                    <div class="cabinet__pets_type">Собака:<span>Барон</span></div>
-                                    <div class="cabinet__pets_breed">Порода:<span>коргі</span></div>
-                                    <div class="cabinet__pets_sex">Стать:<span>хлопчик</span></div>
-                                </div>
-                                <div class="cabinet__pets_dell"></div>
-                            </div>
-                        </div>
-                        <div class="cabinet__add-pet_button">ДОДАТИ УЛЮБЛЕНЦЯ</div>
-                    </div>
-                    <div class="cabinet__add-pet add-pet">
-                        <div class="add-pet__photo"></div>
-                        <div class="add-pet__info">
+                            <div><input type="checkbox" class="subscription__promo_dog checkbox-styled-blue"
+                                    name="promo-dog" value="promo-dog" id="promo-dog"> <label for="promo-dog">для
+                                    собак</label></div>
+                            <div><input type="checkbox" class="subscription__promo_cat checkbox-styled-blue"
+                                    name="promo-cat" value="promo-cat" id="promo-cat"> <label for="promo-cat">для
+                                    котів</label></div>
+                            <div><input type="checkbox" class="subscription__promo_rodent checkbox-styled-blue"
+                                    name="promo-rodent" value="promo-rodent" id="promo-rodent"> <label
+                                    for="promo-rodent">для гризунів</label></div>
+                            <div><input type="checkbox" class="subscription__promo_bird checkbox-styled-blue"
+                                    name="promo-bird" value="promo-bird" id="promo-bird"> <label for="promo-bird">для
+                                    птахів</label></div>
+                            <div><input type="checkbox" class="subscription__promo_fish checkbox-styled-blue"
+                                    name="promo-fish" value="promo-fish" id="promo-fish"> <label for="promo-fish">для
+                                    рибок</label></div>
+                            <div><input type="checkbox" class="subscription__promo_reptile checkbox-styled-blue"
+                                    name="promo-reptile" value="promo-reptile" id="promo-reptile"> <label
+                                    for="promo-reptile">для рептилій</label></div>
 
-                            <div class="add-pet__type my-select">
-                                <div>Оберіть вид</div>
-                                <div>
-                                    <div data="">Оберіть вид</div>
-                                    <div data="Собака">Собака</div>
-                                    <div data="Кот">Кот</div>
-                                    <div data="Рибка">Рибка</div>
-                                    <div data="Папуга">Папуга</div>
-                                    <div data="Гризун">Гризун</div>
-                                    <div data="Рептилія">Рептилія</div>
-                                </div>
-                                <input type="hidden" value="">
-                            </div>
-
-                            <input type="text" class="add-pet__breed" placeholder="Введіть породу">
-                            <input type="checkbox" class="add-pet__no-breed checkbox-styled-blue" name="no-breed"
-                                value="no-breed" id="no-breed"> <label for="no-breed">Немає породи</label>
-                            <input type="text" class="add-pet__name" placeholder="Введіть ім’я">
-                            <div>
-                                <input type="radio" class="add-pet__sex radio-styled" name="pet-sex" value="pet-male"
-                                    id="pet-male">
-                                <label for="pet-male">Хлопчик</label>
-                                <input type="radio" class="add-pet__sex radio-styled" name="pet-sex" value="pet-female"
-                                    id="pet-female">
-                                <label for="pet-female">Дівчинка</label>
-                            </div>
-                            <div><input type="checkbox" class="add-pet__subscribe checkbox-styled-blue"
-                                    name="pet-subscribe" value="pet-subscribe" id="pet-subscribe"> <label
-                                    for="pet-subscribe">Підписатись на
-                                    акції для песиків</label></div>
-                            <button class="add-pet__submit" type="submit">ЗБЕРЕГТИ</button>
+                            <div class="cabinet__subscription_button">ЗБЕРЕГТИ</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
-    <footer class="footer__wrapper">
-        <div class="footer _container">
-            <a href="#" class="footer__logo"></a>
-            <div class="footer__social">
-                <a class="footer__social_instagram" href="#"></a>
-                <a class="footer__social_facebook" href="#"></a>
-                <a class="footer__social_youtube" href="#"></a>
-            </div>
-
-            <div class="footer__blog">
-                <h6 class="footer__blog_title ftitle">Публікації</h6>
-            </div>
-            <div class="footer__account">
-                <h6 class="footer__account_title ftitle">Мій акаунт</h6>
-                <a class="footer__account_item" href="#">Обліковий запис</a>
-                <a class="footer__account_item" href="#">Замовлення</a>
-                <a class="footer__account_item" href="#">Список бажань</a>
-                <a class="footer__account_item" href="#">Список порівняння</a>
-            </div>
-            <div class="footer__information">
-                <h6 class="footer__information_title ftitle">інформація</h6>
-                <a class="footer__information_item" href="#">Про нас</a>
-                <a class="footer__information_item" href="#">Бонусна лояльності</a>
-                <a class="footer__information_item" href="#">Доставка і оплата</a>
-                <a class="footer__information_item" href="#">Повернення товару</a>
-            </div>
-            <div class="footer__contacts">
-                <a class="footer__contacts_number" href="tel:+380685396078">+38 (068) 539 60 78</a>
-                <h6 class="footer__contacts_title ftitle">Роздрібні магазини у Львові</h6>
-                <div class="footer__contacts_item">вул.Наукова, 30</div>
-                <div class="footer__contacts_item">вул.Городоцька, 175</div>
-                <div class="footer__contacts_item">пр.Червоної Калини 42 а</div>
-            </div>
-
-            <div class="footer__copy_text">Copyright &copy 2021, JustZoo.com.ua. All Rights Reserved</div>
-            <div class="footer__copy_cards cards">
-                <div class="cards__mastercard"></div>
-                <div class="cards__paypal"></div>
-                <div class="cards__visa"></div>
-                <div class="cards__2checkout"></div>
-            </div>
-            <div class="footer__copy_intex"></div>
 
         </div>
-    </footer>
+        <footer class="footer__wrapper">
+            <div class="footer _container">
+                <a href="#" class="footer__logo"></a>
+                <div class="footer__social">
+                    <a class="footer__social_instagram" href="#"></a>
+                    <a class="footer__social_facebook" href="#"></a>
+                    <a class="footer__social_youtube" href="#"></a>
+                </div>
+
+                <div class="footer__blog">
+                    <h6 class="footer__blog_title ftitle">Публікації</h6>
+                </div>
+                <div class="footer__account">
+                    <h6 class="footer__account_title ftitle">Мій акаунт</h6>
+                    <a class="footer__account_item" href="#">Обліковий запис</a>
+                    <a class="footer__account_item" href="#">Замовлення</a>
+                    <a class="footer__account_item" href="#">Список бажань</a>
+                    <a class="footer__account_item" href="#">Список порівняння</a>
+                </div>
+                <div class="footer__information">
+                    <h6 class="footer__information_title ftitle">інформація</h6>
+                    <a class="footer__information_item" href="#">Про нас</a>
+                    <a class="footer__information_item" href="#">Бонусна лояльності</a>
+                    <a class="footer__information_item" href="#">Доставка і оплата</a>
+                    <a class="footer__information_item" href="#">Повернення товару</a>
+                </div>
+                <div class="footer__contacts">
+                    <a class="footer__contacts_number" href="tel:+380685396078">+38 (068) 539 60 78</a>
+                    <h6 class="footer__contacts_title ftitle">Роздрібні магазини у Львові</h6>
+                    <div class="footer__contacts_item">вул.Наукова, 30</div>
+                    <div class="footer__contacts_item">вул.Городоцька, 175</div>
+                    <div class="footer__contacts_item">пр.Червоної Калини 42 а</div>
+                </div>
+
+                <div class="footer__copy_text">Copyright &copy 2021, JustZoo.com.ua. All Rights Reserved</div>
+                <div class="footer__copy_cards cards">
+                    <div class="cards__mastercard"></div>
+                    <div class="cards__paypal"></div>
+                    <div class="cards__visa"></div>
+                    <div class="cards__2checkout"></div>
+                </div>
+                <div class="footer__copy_intex"></div>
+
+            </div>
+        </footer>
     </div>
 </body>
 

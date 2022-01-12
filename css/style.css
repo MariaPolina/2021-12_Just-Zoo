@@ -7517,7 +7517,7 @@ input[type=range]::-moz-range-thumb {
 
 /*------cabinet - pet--------*/
 
-.cabinet__pets-text {
+.cabinet__text {
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
@@ -7734,6 +7734,59 @@ input[type=range]::-moz-range-thumb {
     background: #FBC400;
     color: #303361;
 }
+
+/*------cabinet - subscribe--------*/
+
+.cabinet__subscription>div {
+    margin-bottom: 15px;
+}
+
+.cabinet__subscription>div:first-child {
+    border-bottom: 1px solid #F2F1F5;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.cabinet__subscription>div:nth-child(7) {
+    margin-bottom: 30px;
+}
+
+.subscription__promo+label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #303361;
+}
+
+.subscription__promo_dog+label, .subscription__promo_cat+label, .subscription__promo_rodent+label, .subscription__promo_bird+label, .subscription__promo_fish+label, .subscription__promo_reptile+label, .cabinet__subscription_button+label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #303361;
+}
+
+.cabinet__subscription_button {
+    display: flex;
+    min-height: 56px;
+    max-width: 290px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 105px;
+    background: #FBC400;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #303361;
+    transition: all 0.2s ease 0s;
+}
+
+.cabinet__subscription_button:hover {
+    background: #303361;
+    color: #FFFFFF;
+}
+
 
 @media (max-width: 1330px) {
     .cabinet {
@@ -7993,8 +8046,8 @@ input[type=range]::-moz-range-thumb {
 
     /*------cabinet - pet--------*/
 
-    .cabinet__pets-text {
-        font-size: 12px;
+    .cabinet__text {
+        font-size: 14px;
         margin-bottom: 20px;
     }
 
@@ -8116,12 +8169,33 @@ input[type=range]::-moz-range-thumb {
     }
 
     .add-pet__submit {
-
         min-height: 42px;
         padding: 15px 105px;
         font-size: 12px;
         line-height: 15px;
     }
+
+    /*------cabinet - subscribe--------*/
+
+    .cabinet__subscription>div:nth-child(7) {
+        margin-bottom: 20px;
+    }
+
+    .subscription__promo+label {
+        font-size: 12px;
+    }
+
+    .subscription__promo_dog+label, .subscription__promo_cat+label, .subscription__promo_rodent+label, .subscription__promo_bird+label, .subscription__promo_fish+label, .subscription__promo_reptile+label, .cabinet__subscription_button+label {
+        font-size: 12px;
+    }
+
+    .cabinet__subscription_button {
+        min-height: 42px;
+        padding: 15px 105px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
 }
 
 /*------end of cabinet page--------*/
