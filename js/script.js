@@ -9,8 +9,6 @@ var modalWrapper = false
 
 $(document).ready(function () {
 
-
-
     $('.product-card__purchase_1click, .goods-card__buy_1click, .comparison__item_purchase_1click').on('click', function () {
         if (modalWrapper) {
             $(this).attr('id', '');
@@ -286,6 +284,12 @@ $(document).ready(function () {
         $($($(this).parent()).next('input')).val($(this).attr('data'));
 
         $($($(this).parent()).prev("div")).text($(this).text()).trigger('click');
+
+    });
+
+    $('.history__filter_button').on('click', function (event) {
+        $('.history__filter').slideToggle(300);
+        $(this).toggleClass('active');
 
     });
 
