@@ -114,6 +114,160 @@ a {
     box-sizing: border-box;
 }
 
+/*------my-select--------*/
+
+.my-select {
+    position: relative;
+}
+
+.my-select>div:nth-child(2) {
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    width: 100%;
+}
+
+.my-select>div:first-child {
+    background: #FFFFFF url(../img/cabinet/arrow-down-b.svg) calc(100% - 25px) center no-repeat;
+    border: 1px solid rgba(154, 170, 186, 0.6);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #303361;
+}
+
+.my-select>div:first-child.active {
+    background: #FFFFFF url(../img/cabinet/arrow-up-y.svg) calc(100% - 25px) center no-repeat;
+    border: 1px solid #FBC400;
+}
+
+.my-select div:nth-child(2)>div {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    color: #303361;
+    padding: 7px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.my-select div:nth-child(2)>div:hover {
+    background: rgba(251, 196, 0, 0.7);
+}
+
+.my-select div:nth-child(2)>div.active {
+    background: #FBC400;
+}
+
+/*------checkbox-styled yellow--------*/
+
+.checkbox-styled {
+    z-index: -1;
+    opacity: 0;
+    margin-left: -15px;
+}
+
+.checkbox-styled+label::before {
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid rgba(154, 170, 186, 0.7);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.checkbox-styled+label:hover::before {
+    border: 1px solid #FBC400;
+}
+
+.checkbox-styled:checked+label::before {
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #FBC400 url(../img/category/f-checked.svg) center center no-repeat;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/*------checkbox-styled-blue--------*/
+
+.checkbox-styled-blue {
+    z-index: -1;
+    opacity: 0;
+    margin-left: -15px;
+}
+
+.checkbox-styled-blue+label::before {
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid rgba(154, 170, 186, 0.7);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.checkbox-styled-blue:hover::before {
+    border: 1px solid #FBC400;
+}
+
+.checkbox-styled-blue:checked+label::before {
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #303361 url(../img/category/f-checked.svg) center center no-repeat;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/*------radio-styled--------*/
+
+.radio-styled {
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+}
+
+.radio-styled+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radio-styled+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid rgba(154, 170, 186, 0.6);
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin-right: 0.5em;
+}
+
+.radio-styled:checked+label::before {
+    border: 2px solid #303361;
+    background: #FFFFFF url(../img/cabinet/dot.svg) center center no-repeat;
+    background-size: 8px 8px;
+}
+
 /*------end of general--------*/
 
 /*------HEADER--------*/
@@ -4264,39 +4418,6 @@ a {
     padding-right: 10px;
 }
 
-.checkbox-styled {
-    z-index: -1;
-    opacity: 0;
-    margin-left: -15px;
-}
-
-.checkbox-styled+label::before {
-    content: " ";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: #FFFFFF;
-    border: 1px solid rgba(154, 170, 186, 0.7);
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-right: 12px;
-}
-
-.checkbox-styled+label:hover::before {
-    border: 1px solid #FBC400;
-}
-
-.checkbox-styled:checked+label::before {
-    content: " ";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: #FBC400 url(../img/category/f-checked.svg) center center no-repeat;
-    border: none;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
 .filter_count {
     font-weight: 500;
     font-size: 14px;
@@ -4471,20 +4592,7 @@ input[type=range]::-moz-range-thumb {
 
     .column-left__sorting {
         grid-area: sorting;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        color: #303361;
-        border: 1px solid rgba(154, 170, 186, 0.4);
-        box-sizing: border-box;
-        border-radius: 8px;
-        padding: 15px 35px 15px 25px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: #FFFFFF url(../img/category/arrow-down.svg) 92% center no-repeat;
-        cursor: pointer;
-        width: 250px;
+        width: 300px;
         margin-right: 50px;
         justify-self: end;
     }
@@ -4902,19 +5010,6 @@ input[type=range]::-moz-range-thumb {
 
     .column-left__sorting {
         grid-area: sorting;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        color: #303361;
-        border: 1px solid rgba(154, 170, 186, 0.4);
-        box-sizing: border-box;
-        border-radius: 8px;
-        padding: 15px 35px 15px 25px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: #FFFFFF url(../img/category/arrow-down.svg) 92% center no-repeat;
-        cursor: pointer;
         width: 100%;
         justify-self: end;
     }
@@ -6800,7 +6895,6 @@ input[type=range]::-moz-range-thumb {
     color: #303361;
     cursor: pointer;
     transition: all 0.2s ease 0s;
-
 }
 
 .favorites__return:hover {
@@ -7319,7 +7413,7 @@ input[type=range]::-moz-range-thumb {
     background-size: 28px 28px;
 }
 
-.cabinet__user-name {
+.cabinet-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 30px;
@@ -7327,6 +7421,8 @@ input[type=range]::-moz-range-thumb {
     padding-top: 10px;
     margin-bottom: 25px;
 }
+
+/*------cabinet - main--------*/
 
 .cabinet__welcome {
     font-weight: 500;
@@ -7417,6 +7513,226 @@ input[type=range]::-moz-range-thumb {
     line-height: 24px;
     color: #86A1BA;
     margin-left: 20px;
+}
+
+/*------cabinet - pet--------*/
+
+.cabinet__pets-text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: #303361;
+    margin-bottom: 30px;
+}
+
+.cabinet__pets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    column-gap: 30px;
+    row-gap: 15px;
+    grid-auto-rows: 1fr;
+    margin-bottom: 40px;
+}
+
+.cabinet__pets_item {
+    display: grid;
+    grid-template: auto auto auto / 130px 1fr;
+    grid-template-areas: "photo type""photo breed""photo sex";
+    column-gap: 30px;
+    background: #F9F9FD;
+    border-radius: 12px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.cabinet__pets_photo {
+    grid-area: photo;
+    width: 130px;
+    height: 130px;
+    background: #D7DDE3 url(../img/cabinet/add-photo-w.png) center center no-repeat;
+    cursor: pointer;
+}
+
+.cabinet__pets_photo img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.cabinet__pets_type {
+    grid-area: type;
+    padding-top: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+}
+
+.cabinet__pets_breed {
+    grid-area: breed;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+}
+
+.cabinet__pets_sex {
+    grid-area: sex;
+    padding-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+}
+
+.cabinet__pets_type span, .cabinet__pets_breed span, .cabinet__pets_sex span {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.cabinet__pets_item-wrapper {
+    position: relative;
+}
+
+.cabinet__pets_dell {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    position: absolute;
+    background: #E6ECF2 url(../img/cabinet/dell-b.svg) center center no-repeat;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.cabinet__add-pet_button {
+    background: #FBC400;
+    border-radius: 8px;
+    min-height: 56px;
+    width: 380px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #303361;
+    text-transform: uppercase;
+    transition: all 0.2s ease 0s;
+}
+
+.cabinet__add-pet_button:hover {
+    color: #FFFFFF;
+    background: #303361;
+}
+
+.cabinet__add-pet {
+    margin-top: 45px;
+    display: none;
+    column-gap: 60px;
+    grid-template: 1fr / auto 2fr;
+}
+
+.add-pet__photo {
+    width: 210px;
+    height: 210px;
+    background: #FAF9FE url(../img/cabinet/add-photo-b.png) center center no-repeat;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+}
+
+.add-pet__photo::after {
+    content: 'Завантажте фото';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+    position: absolute;
+    top: 130px;
+    left: 30px;
+}
+
+.add-pet__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.add-pet__info {
+    margin-right: 100px;
+}
+
+.add-pet__type {
+    margin-bottom: 15px;
+}
+
+.add-pet__type>div:first-child {
+    background: #FFFFFF url(../img/cabinet/arrow-down-y.svg) calc(100% - 25px) center no-repeat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9AAABA;
+}
+
+.add-pet__breed, .add-pet__name {
+    border: 1px solid rgba(154, 170, 186, 0.6);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303361;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.add-pet__breed::placeholder, .add-pet__name::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9AAABA;
+}
+
+.add-pet__no-breed {
+    margin-bottom: 15px;
+}
+
+.add-pet__subscribe {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.add-pet__no-breed+label, .add-pet__subscribe+label, .add-pet__sex+label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #303361;
+}
+
+.add-pet__submit {
+    display: flex;
+    min-height: 56px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 105px;
+    background: #303361;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: all 0.2s ease 0s;
+}
+
+.add-pet__submit:hover {
+    background: #FBC400;
+    color: #303361;
 }
 
 @media (max-width: 1330px) {
@@ -7614,11 +7930,13 @@ input[type=range]::-moz-range-thumb {
         padding: 15px;
     }
 
-    .cabinet__user-name {
+    .cabinet-title {
         font-size: 22px;
         line-height: 30px;
         margin-bottom: 5px;
     }
+
+    /*------cabinet - main--------*/
 
     .cabinet__welcome {
         font-size: 12px;
@@ -7671,6 +7989,138 @@ input[type=range]::-moz-range-thumb {
     .cabinet__add-bonus span {
         font-size: 12px;
         margin-left: 12px;
+    }
+
+    /*------cabinet - pet--------*/
+
+    .cabinet__pets-text {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .cabinet__pets {
+        margin-bottom: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+
+    .cabinet__pets_item {
+        display: grid;
+        grid-template: auto auto auto / 80px 1fr;
+        grid-template-areas: "photo type""photo breed""photo sex";
+        column-gap: 20px;
+    }
+
+    .cabinet__pets_photo {
+        width: 80px;
+        height: 100px;
+    }
+
+    .cabinet__pets_photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cabinet__pets_type {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .cabinet__pets_breed {
+        font-size: 12px;
+    }
+
+    .cabinet__pets_sex {
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .cabinet__pets_item-wrapper {
+        position: relative;
+    }
+
+    .cabinet__pets_dell {
+        width: 32px;
+        height: 32px;
+    }
+
+    .cabinet__add-pet_button {
+        min-height: 42px;
+        width: 290px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .cabinet__add-pet {
+        row-gap: 15px;
+        grid-template: auto 1fr / 1fr;
+    }
+
+    .add-pet__photo {
+        width: 290px;
+        height: 230px;
+        background: #FAF9FE url(../img/cabinet/add-photo-b.png) center center no-repeat;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .add-pet__photo::after {
+        top: 140px;
+        left: 75px;
+    }
+
+    .add-pet__photo img {
+        width: 290px;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    .add-pet__info {
+        margin-right: 0;
+    }
+
+    .add-pet__type {
+        margin-bottom: 10px;
+    }
+
+    .add-pet__type>div:first-child {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 12px 15px;
+    }
+
+    .add-pet__breed, .add-pet__name {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 10px;
+        padding: 12px 15px;
+    }
+
+    .add-pet__breed::placeholder, .add-pet__name::placeholder {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .add-pet__no-breed {
+        margin-bottom: 10px;
+    }
+
+    .add-pet__subscribe {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .add-pet__no-breed+label, .add-pet__subscribe+label, .add-pet__sex+label {
+        font-size: 12px;
+        line-height: 23px;
+    }
+
+    .add-pet__submit {
+
+        min-height: 42px;
+        padding: 15px 105px;
+        font-size: 12px;
+        line-height: 15px;
     }
 }
 

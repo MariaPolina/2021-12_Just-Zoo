@@ -267,6 +267,29 @@ $(document).ready(function () {
         $(this).toggleClass('choosed');
     });
 
+
+    $('.cabinet__add-pet_button').on('click', function (event) {
+        $('.cabinet__add-pet').css('display', 'grid');
+    });
+
+
+    $('.my-select>div:first-child').on('click', function (event) {
+        $($(this).next('div')).slideToggle(300);
+        $(this).toggleClass('active');
+
+    });
+
+    $('.my-select >div:nth-child(2)> div').on('click', function (event) {
+        $('.my-select div:nth-child(2)> div').removeClass('active');
+        $(this).addClass('active');
+
+        $($($(this).parent()).next('input')).val($(this).attr('data'));
+
+        $($($(this).parent()).prev("div")).text($(this).text()).trigger('click');
+
+    });
+
+
 });
 
 $(window).resize(function () {
