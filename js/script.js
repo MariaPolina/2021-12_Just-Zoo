@@ -290,7 +290,11 @@ $(document).ready(function () {
     $('.history__filter_button').on('click', function (event) {
         $('.history__filter').slideToggle(300);
         $(this).toggleClass('active');
+    });
 
+    $('.FAQ__question').on('click', function (event) {
+        $($(this).next('div')).slideToggle(300);
+        $(this).toggleClass('active');
     });
 
 
