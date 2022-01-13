@@ -305,7 +305,7 @@ $(window).resize(function () {
         $('.product-description').css('display', 'grid');
         $('.product-description__text').css('display', 'block');
         $('.product-description_specification_items').css('display', 'grid');
-        $('.product-review').css('display', 'none');
+        $('.description-review .product-review').css('display', 'none');
         $('.description__button').trigger('click');
         $('.cabinet__menu_wrapper').css('display', 'block');
 
@@ -323,9 +323,9 @@ $(window).resize(function () {
         mobileSpecificationOpen = false;
         $('.product-description_specification_items').css('display', 'none');
         $('.product-description_specification_title').removeClass('active');
-        $('.product-review__items').css('display', 'none');
+        $('.description-review .product-review__items').css('display', 'none');
         $('.review__title').removeClass('active');
-        $('.product-review').css('display', 'grid');
+        $('.description-review .product-review').css('display', 'grid');
         $('.cabinet__menu_wrapper').css('display', 'none');
     }
 });
