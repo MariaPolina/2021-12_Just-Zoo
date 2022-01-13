@@ -8512,6 +8512,410 @@ input[type=range]::-moz-range-thumb {
 
 /*------end of cabinet page--------*/
 
+/*------blog page--------*/
+
+.blog {
+    margin-bottom: 90px;
+}
+
+.blog__categories {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 30px;
+    overflow-x: auto;
+    scrollbar-color: #303361 #F2F1F5;
+    scrollbar-width: thin;
+    padding-bottom: 20px;
+}
+
+.blog__categories::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #F2F1F5;
+    border-radius: 15px;
+}
+
+.blog__categories::-webkit-scrollbar-thumb {
+    background: #303361;
+    border-radius: 15px;
+}
+
+.blog__category {
+    transition: all 0.1s ease 0s;
+    padding: 15px 35px 15px 70px;
+    border-radius: 10px;
+    max-width: 190px;
+    color: #303361;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.blog__category:hover {
+    color: #FFFFFF;
+}
+
+.blog__category_dog {
+    background: #FAF9FE url(../img/categories/sm-dog.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_dog:hover {
+    background: #303361 url(../img/categories/sm-dog_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_cat {
+    background: #FAF9FE url(../img/categories/sm-cat.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_cat:hover {
+    background: #303361 url(../img/categories/sm-cat_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_bird {
+    background: #FAF9FE url(../img/categories/sm-bird.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_bird:hover {
+    background: #303361 url(../img/categories/sm-bird_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_rodent {
+    background: #FAF9FE url(../img/categories/sm-mouse.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_rodent:hover {
+    background: #303361 url(../img/categories/sm-mouse_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_fish {
+    background: #FAF9FE url(../img/categories/sm-fish.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_fish:hover {
+    background: #303361 url(../img/categories/sm-fish_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_reptile {
+    background: #FAF9FE url(../img/categories/sm-chameleon.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__category_reptile:hover {
+    background: #303361 url(../img/categories/sm-chameleon_w.svg) 35px center no-repeat;
+    background-size: 24px 24px;
+}
+
+.blog__items {
+    display: grid;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    column-gap: 60px;
+    row-gap: 40px;
+    justify-items: center;
+}
+
+.blog__item {
+    display: grid;
+    grid-template: 330px auto 25px / 1fr;
+    position: relative;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+.blog__item_image {
+    position: relative;
+    max-width: 600px;
+    height: 330px;
+}
+
+.blog__item img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog__item_image-back {
+    background: rgba(154, 170, 186, 0.6);
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.blog__item_image-back>span {
+    color: #FFFFFF;
+}
+
+.blog__item_image-back>span::after {
+    content: url(../img/blog/arrow_right_w.svg);
+    margin-left: 10px;
+}
+
+.blog__item_date {
+    background: #FBC400 url(../img/blog/calendar_b.svg) 15px center no-repeat;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #303361;
+    padding: 10px 15px 10px 40px;
+    position: absolute;
+    top: 280px;
+    left: 15px;
+}
+
+.blog__item_title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #303361;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.blog__item:hover .blog__item_title {
+    color: #FBC400;
+}
+
+.blog__item:hover .blog__item_image-back {
+    display: flex;
+}
+
+.blog__item_more {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FBC400;
+    align-self: end;
+}
+
+.blog__item_more::after {
+    content: url(../img/blog/arrow_right_y.svg);
+    margin-left: 10px;
+}
+
+.blog__pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.blog__pagination_left {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF url(../img/category/arrow-grey.svg) center center no-repeat;
+}
+
+.blog__pagination_left:hover {
+    background: #FFFFFF url(../img/category/arrow-yellow.svg) center center no-repeat;
+    transform: rotate(180deg);
+}
+
+.blog__pagination_right {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF url(../img/category/arrow-grey.svg) center center no-repeat;
+    transform: rotate(180deg);
+}
+
+.blog__pagination_right:hover {
+    background: #FFFFFF url(../img/category/arrow-yellow.svg) center center no-repeat;
+    transform: rotate(360deg);
+}
+
+.blog__pagination_pages {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    column-gap: 12px;
+    max-width: 400px;
+    justify-self: center;
+}
+
+.blog__pagination_page {
+    cursor: pointer;
+    display: inline;
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid rgba(154, 170, 186, 0.6);
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #303361;
+    transition: all 0.3s ease 0s;
+}
+
+.blog__pagination_page:hover, .blog__pagination_page.active {
+    background: #FBC400;
+    border: 1px solid #FBC400;
+    cursor: pointer;
+}
+
+.blog__pagination_page_dots {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    border: none;
+    text-align: center;
+    padding-top: 15px;
+    color: rgba(154, 170, 186, 0.6);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1330px) {
+    .blog {
+        margin-bottom: 50px;
+    }
+
+    .blog__categories {
+        column-gap: 10px;
+    }
+
+    .blog__category {
+        padding: 8px 20px 8px 40px;
+        max-width: 120px;
+        font-size: 12px;
+    }
+
+    .blog__category_dog {
+        background: #FAF9FE url(../img/categories/sm-dog.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_dog:hover {
+        background: #303361 url(../img/categories/sm-dog_w.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_cat {
+        background: #FAF9FE url(../img/categories/sm-cat.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_cat:hover {
+        background: #303361 url(../img/categories/sm-cat_w.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_bird {
+        background: #FAF9FE url(../img/categories/sm-bird.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_bird:hover {
+        background: #303361 url(../img/categories/sm-bird_w.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_rodent {
+        background: #FAF9FE url(../img/categories/sm-mouse.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_rodent:hover {
+        background: #303361 url(../img/categories/sm-mouse_w.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_fish {
+        background: #FAF9FE url(../img/categories/sm-fish.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_fish:hover {
+        background: #303361 url(../img/categories/sm-fish_w.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_reptile {
+        background: #FAF9FE url(../img/categories/sm-chameleon.svg) 15px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__category_reptile:hover {
+        background: #303361 url(../img/categories/sm-chameleon_w.svg) 35px center no-repeat;
+        background-size: 18px 18px;
+    }
+
+    .blog__items {
+        display: grid;
+        margin-top: 25px;
+        margin-bottom: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+
+    .blog__item {
+        display: grid;
+        grid-template: 170px auto 20px / 1fr;
+        max-width: 290px;
+    }
+
+    .blog__item_image {
+        max-width: 290px;
+        height: 170px;
+    }
+
+    .blog__item img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .blog__item_image-back {
+        border-radius: 10px;
+    }
+
+    .blog__item_date {
+        background: #FBC400 url(../img/blog/calendar_b.svg) 10px center no-repeat;
+        font-size: 10px;
+        line-height: 12px;
+        padding: 8px 15px 8px 30px;
+        top: 130px;
+        left: 10px;
+    }
+
+    .blog__item_title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .blog__item_more {
+        font-size: 12px;
+        line-height: 15px;
+        align-self: end;
+    }
+
+}
+
+/*------end of blog page--------*/
+
 /*------FAQ page--------*/
 
 .FAQ__wrapper {
