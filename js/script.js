@@ -292,6 +292,11 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    $('.open-history-item').on('click', function (event) {
+        $('.history__order').slideToggle(300);
+        $(this).toggleClass('active');
+    });
+
     $('.FAQ__question').on('click', function (event) {
         $($(this).next('div')).slideToggle(300);
         $(this).toggleClass('active');
