@@ -302,6 +302,8 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    $('.cabinet__personal_tel').inputmask({ "mask": "+38 (099) 999 99 99" });
+
 
 });
 

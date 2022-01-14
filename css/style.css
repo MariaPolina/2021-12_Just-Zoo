@@ -7306,6 +7306,7 @@ input[type=range]::-moz-range-thumb {
     display: grid;
     grid-template: 1fr / 1fr 3fr;
     column-gap: 100px;
+    min-height: 800px;
 }
 
 .cabinet__menu_item {
@@ -7780,6 +7781,7 @@ input[type=range]::-moz-range-thumb {
     line-height: 17px;
     color: #303361;
     transition: all 0.2s ease 0s;
+    cursor: pointer;
 }
 
 .cabinet__subscription_button:hover {
@@ -8096,6 +8098,69 @@ input[type=range]::-moz-range-thumb {
     color: #303361;
 }
 
+/*------cabinet - personal info--------*/
+
+.cabinet__personal {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.cabinet__personal p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9AAABA;
+    margin-bottom: 8px;
+}
+
+.cabinet__personal input {
+    border: 1px solid rgba(154, 170, 186, 0.6);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303361;
+    padding: 14px 45px;
+    width: 580px;
+    margin-bottom: 15px;
+}
+
+.cabinet__personal_surname, .cabinet__personal_name {
+    background: #FFFFFF url(../img/cabinet/user-small.svg) 20px center no-repeat;
+}
+
+.cabinet__personal_tel {
+    background: #FFFFFF url(../img/cabinet/phone-small.svg) 20px center no-repeat;
+}
+
+.cabinet__personal_email {
+    background: #FFFFFF url(../img/cabinet/mail-small.svg) 20px center no-repeat;
+}
+
+.cabinet__personal_button {
+    display: flex;
+    min-height: 56px;
+    max-width: 580px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 100px;
+    background: #303361;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FBC400;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+}
+
+.cabinet__personal_button:hover {
+    background: #FBC400;
+    color: #303361;
+}
+
 
 @media (max-width: 1330px) {
     .cabinet {
@@ -8103,6 +8168,7 @@ input[type=range]::-moz-range-thumb {
         margin-bottom: 50px;
         display: grid;
         grid-template: auto 1fr/ 1fr;
+        min-height: 400px;
     }
 
     .cabinet__menu {
@@ -8668,6 +8734,33 @@ input[type=range]::-moz-range-thumb {
     .history__order_info-text {
         font-size: 14px;
         line-height: 17px;
+    }
+
+    /*------cabinet - personal info--------*/
+
+    .cabinet__personal {
+        margin: 15px auto;
+    }
+
+    .cabinet__personal p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .cabinet__personal input {
+        font-size: 12px;
+        line-height: 15px;
+        color: #303361;
+        padding: 11px 45px;
+        width: 100%;
+        max-width: 580px;
+    }
+
+    .cabinet__personal_button {
+        min-height: 42px;
+        max-width: 580px;
+        font-size: 12px;
+        line-height: 15px;
     }
 
 }
