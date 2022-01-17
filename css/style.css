@@ -7692,6 +7692,10 @@ input[type=range]::-moz-range-thumb {
     margin-bottom: 15px;
 }
 
+.add-pet__breed:focus, .add-pet__name:focus {
+    border: 1px solid #FBC400;
+}
+
 .add-pet__breed::placeholder, .add-pet__name::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -8098,7 +8102,7 @@ input[type=range]::-moz-range-thumb {
     color: #303361;
 }
 
-/*------cabinet - personal info--------*/
+/*------cabinet - personal info and change password--------*/
 
 .cabinet__personal {
     margin-top: 35px;
@@ -8126,6 +8130,17 @@ input[type=range]::-moz-range-thumb {
     margin-bottom: 15px;
 }
 
+.cabinet__personal input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9AAABA;
+}
+
+.cabinet__personal input:focus {
+    border: 1px solid #FBC400;
+}
+
 .cabinet__personal_surname, .cabinet__personal_name {
     background: #FFFFFF url(../img/cabinet/user-small.svg) 20px center no-repeat;
 }
@@ -8136,6 +8151,10 @@ input[type=range]::-moz-range-thumb {
 
 .cabinet__personal_email {
     background: #FFFFFF url(../img/cabinet/mail-small.svg) 20px center no-repeat;
+}
+
+.cabinet__personal_old-password, .cabinet__personal_new-password, .cabinet__personal_password-repeat {
+    background: #FFFFFF url(../img/cabinet/key-small.svg) 20px center no-repeat;
 }
 
 .cabinet__personal_button {
@@ -8161,6 +8180,81 @@ input[type=range]::-moz-range-thumb {
     color: #303361;
 }
 
+.cabinet__password_button {
+    display: flex;
+    min-height: 56px;
+    max-width: 580px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 100px;
+    background: #FBC400;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #303361;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+}
+
+.cabinet__password_button:hover {
+    background: #303361;
+    color: #FBC400;
+}
+
+.old-password__wrapper, .new-password__wrapper, .repeat-password__wrapper {
+    position: relative;
+    width: 580px;
+}
+
+.password-control {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../img/cabinet/eye-no.svg) center center no-repeat;
+}
+
+.password-control.view {
+    background: url(../img/cabinet/eye.svg) center center no-repeat;
+}
+
+.cabinet__social-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.cabinet__facebook-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.cabinet__facebook {
+    width: 94px;
+    height: 42px;
+    border-radius: 8px 0 0 8px;
+    background: #303361 url(../img/cabinet/facebook.svg) center center no-repeat;
+}
+
+.cabinet__dell {
+    width: 39px;
+    height: 42px;
+    background: #E6ECF2 url(../img/cabinet/dell-b.svg) center center no-repeat;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    margin-right: 25px;
+}
+
+.cabinet__google {
+    width: 94px;
+    height: 42px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.46) url(../img/cabinet/google.svg) center center no-repeat;
+}
 
 @media (max-width: 1330px) {
     .cabinet {
@@ -8756,12 +8850,32 @@ input[type=range]::-moz-range-thumb {
         max-width: 580px;
     }
 
-    .cabinet__personal_button {
+    .cabinet__personal input::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .cabinet__personal_button, .cabinet__password_button {
         min-height: 42px;
         max-width: 580px;
         font-size: 12px;
         line-height: 15px;
     }
+
+    .cabinet__dell {
+        margin-right: 15px;
+    }
+
+    .password-control {
+        top: 8px;
+        right: 15px;
+    }
+
+    .old-password__wrapper, .new-password__wrapper, .repeat-password__wrapper {
+        width: 100%;
+        max-width: 580px;
+    }
+
 
 }
 

@@ -304,6 +304,17 @@ $(document).ready(function () {
 
     $('.cabinet__personal_tel').inputmask({ "mask": "+38 (099) 999 99 99" });
 
+    $('.password-control').on('click', function (event) {
+        if ($($(this).prev('input')).attr('type') == 'password') {
+            $(this).addClass('view');
+            $($(this).prev('input')).attr('type', 'text');
+        } else {
+            $(this).removeClass('view');
+            $($(this).prev('input')).attr('type', 'password');
+        }
+        return false;
+    });
+
 
 });
 
