@@ -8141,11 +8141,11 @@ input[type=range]::-moz-range-thumb {
     border: 1px solid #FBC400;
 }
 
-.cabinet__personal_surname, .cabinet__personal_name {
+.cabinet__personal_surname, .cabinet__personal_name, .cabinet__address_surname, .cabinet__address_name {
     background: #FFFFFF url(../img/cabinet/user-small.svg) 20px center no-repeat;
 }
 
-.cabinet__personal_tel {
+.cabinet__personal_tel, .cabinet__address_tel {
     background: #FFFFFF url(../img/cabinet/phone-small.svg) 20px center no-repeat;
 }
 
@@ -8155,6 +8155,14 @@ input[type=range]::-moz-range-thumb {
 
 .cabinet__personal_old-password, .cabinet__personal_new-password, .cabinet__personal_password-repeat {
     background: #FFFFFF url(../img/cabinet/key-small.svg) 20px center no-repeat;
+}
+
+.cabinet__address_address {
+    background: #FFFFFF url(../img/cabinet/location-small.svg) 20px center no-repeat;
+}
+
+.cabinet__address_place {
+    background: #FFFFFF url(../img/cabinet/car-small.svg) 20px center no-repeat;
 }
 
 .cabinet__personal_button {
@@ -8180,7 +8188,7 @@ input[type=range]::-moz-range-thumb {
     color: #303361;
 }
 
-.cabinet__password_button {
+.cabinet__password_button, .cabinet__address_button {
     display: flex;
     min-height: 56px;
     max-width: 580px;
@@ -8192,13 +8200,13 @@ input[type=range]::-moz-range-thumb {
     border-radius: 12px;
     font-weight: 700;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 24px;
     color: #303361;
     transition: all 0.2s ease 0s;
     cursor: pointer;
 }
 
-.cabinet__password_button:hover {
+.cabinet__password_button:hover, .cabinet__address_button:hover {
     background: #303361;
     color: #FBC400;
 }
@@ -8238,6 +8246,7 @@ input[type=range]::-moz-range-thumb {
     height: 42px;
     border-radius: 8px 0 0 8px;
     background: #303361 url(../img/cabinet/facebook.svg) center center no-repeat;
+    cursor: pointer;
 }
 
 .cabinet__dell {
@@ -8254,6 +8263,81 @@ input[type=range]::-moz-range-thumb {
     height: 42px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.46) url(../img/cabinet/google.svg) center center no-repeat;
+    cursor: pointer;
+}
+
+.cabinet__address {
+    margin-top: 0;
+}
+
+.cabinet__address-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cabinet__address1-button, .cabinet__address2-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 58px;
+    background: #FAF9FE url(../img/cabinet/location-y.svg) 35px center no-repeat;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #303361;
+    padding: 17px 35px 17px 70px;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.cabinet__address1-button:hover, .cabinet__address2-button:hover, .cabinet__address1-button.active, .cabinet__address2-button.active {
+    background: #303361 url(../img/cabinet/location-y.svg) 35px center no-repeat;
+    color: #FFFFFF;
+}
+
+.cabinet__main-address+label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    color: #303361;
+    margin-left: 20px;
+
+}
+
+.cabinet__address-dell {
+    width: 160px;
+    height: 48px;
+    border-radius: 10px;
+    background: #FAF9FE url(../img/cabinet/dell-r.svg) 25px center no-repeat;
+    padding: 12px 20px 12px 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303361;
+    cursor: pointer;
+    display: inline;
+}
+
+.cabinet__main-address {
+    width: 0 !important;
+}
+
+.cabinet__address-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 580px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.cabinet__address2 {
+    display: none;
 }
 
 @media (max-width: 1330px) {

@@ -304,6 +304,9 @@ $(document).ready(function () {
 
     $('.cabinet__personal_tel').inputmask({ "mask": "+38 (099) 999 99 99" });
 
+    $('.cabinet__address_tel').inputmask({ "mask": "+38 (099) 999 99 99" });
+
+
     $('.password-control').on('click', function (event) {
         if ($($(this).prev('input')).attr('type') == 'password') {
             $(this).addClass('view');
@@ -313,6 +316,19 @@ $(document).ready(function () {
             $($(this).prev('input')).attr('type', 'password');
         }
         return false;
+    });
+
+    $('.cabinet__address2-button').on('click', function (event) {
+        $('#address1').css('display', 'none');
+        $('#address2').css('display', 'block');
+        $(this).addClass('active');
+        $('.cabinet__address1-button').removeClass('active');
+    });
+    $('.cabinet__address1-button').on('click', function (event) {
+        $('#address2').css('display', 'none');
+        $('#address1').css('display', 'block');
+        $(this).addClass('active');
+        $('.cabinet__address2-button').removeClass('active');
     });
 
 
